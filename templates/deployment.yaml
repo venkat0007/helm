@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: {{ .Values.image-name }}
+        image: {{ .Values.image }}
         ports:
         - containerPort: 8080
