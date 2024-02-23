@@ -11,7 +11,7 @@ pipeline {
 	  stage ("deploying the backendapplication to k8s"){
 	  steps {
 	   script {
-	     sh 'helm upgrade --install backend . --values values-devtest.yaml'
+	     sh "helm upgrade --install backend . --values values-${params.env}.yaml"
 	     }
 	     }
 	     }
